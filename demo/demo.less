@@ -1,0 +1,41 @@
+.border-radius(@radius:10px){
+  border-radius:@radius;
+  -moz-border-radius:@radius;
+  -webkit-border-radius:@radius;
+}
+.shadow(@x:1px, @y:2px, @blur:10px, @spread:3px, @color:#aaa){
+  box-shadow: @x @y @blur @spread @color;
+  -moz-box-shadow: @x @y @blur @spread @color;
+  -webkit-box-shadow: @x @y @blur @spread @color;
+}
+body{
+  font-family:Helvetica, Arial, sans-serif;
+}
+a{
+  text-decoration:none;
+}
+a:hover{
+  text-decoration:underline;
+}
+ul, li { 
+  margin:0;
+  padding:0;  
+  list-style:none;
+  display:inline-block;
+}
+#theMenu 
+{
+  background-color:#ccc; 
+  padding:10px;
+  .border-radius;
+  .hide-until-fixed{
+    padding-left:30px;
+    display:none;
+  }
+}
+.fixed #theMenu, #theMenu.fixed{
+  .shadow;
+  .hide-until-fixed{
+    display:inline;
+  }
+}
