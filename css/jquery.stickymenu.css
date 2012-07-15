@@ -1,1 +1,4 @@
-.fixed{position:fixed;z-index:1000;}
+.stuck {
+  position: fixed;
+  z-index: 1000;
+}

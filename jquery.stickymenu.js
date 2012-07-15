@@ -21,12 +21,12 @@
     var offset = $menu.offset();
 
     $window.scroll(function(){
-      if($window.scrollTop() > offset.top + $menu.height() + additionalOffset && !$menu.hasClass('fixed')){
-        $menu.addClass('fixed');
+      if($window.scrollTop() > offset.top + $menu.height() + additionalOffset && !$menu.hasClass('stuck')){
+        $menu.addClass('stuck');
         $original.width(originalWidth);
       }
-      else if($window.scrollTop() + additionalOffset < offset.top && $menu.hasClass('fixed')){
-        $menu.removeClass('fixed');
+      else if($window.scrollTop() + additionalOffset < offset.top && $menu.hasClass('stuck')){
+        $menu.removeClass('stuck');
         $original.width("auto");
       }
     });
